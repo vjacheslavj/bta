@@ -23,7 +23,8 @@ public class TestBta {
         celojumuPage.scrollDownCelojumaPage();
         celojumuPage.lookingForCelojumaGalamerkisField();
         celojumuPage.lookingForIzvelValstiBtnPopupWindow();
-        celojumuPage.lookingForPievienValstBtn();
+        celojumuPage.clickEnterText();
+        celojumuPage.clickEnterText();
 
     }
 }

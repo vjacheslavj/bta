@@ -38,9 +38,13 @@ public class BaseFunction {
 
     public void click(By locator){
         LOGGER.info("Clicking on element: " + locator);
+
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
-    public void enterText(By lo)
+    public void clickEnterText(By locator, String text) {
+        LOGGER.info("Waiting then field would be visable and entering text");
 
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
+    }
 }

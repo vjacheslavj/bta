@@ -27,13 +27,4 @@ public class MainPage extends BaseFunction{
 
         click(CELOJUMI_BTN);
     }
-
-    public void typeIndijaClickOnIt (By locator, String text) {
-        LOGGER.info("Typing Indija and clicking on the found");
-
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
-    }
-
-
-
 }

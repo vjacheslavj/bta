@@ -36,9 +36,9 @@ public class CelojumuPage extends BaseFunction{
         click(IZVELIES_VALSTI_BTN);
     }
 
-    public void lookingForPievienValstBtn(){
-        LOGGER.info("Looking for Pienienot valsti field to click on it ");
+    public void clickEnterText () {
+        LOGGER.info("Typing Indija and clicking on the found");
 
-        click(PIEVIENOT_VALSTI_BTN);
+        clickEnterText(PIEVIENOT_VALSTI_BTN, "Indija");
     }
 }
