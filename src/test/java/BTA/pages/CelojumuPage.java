@@ -9,6 +9,9 @@ public class CelojumuPage extends BaseFunction{
     private final By CELOJUMA_GALAMERKIS_FIELD = By.xpath(".//button[@id = 'regionalSelectorRegion-open']");
     private final By IZVELIES_VALSTI_BTN = By.xpath(".//div[@id = 'regionalSelectorCountry']");
     private final By PIEVIENOT_VALSTI_BTN = By.xpath(".//span[@class = 'text add-text']");
+    private final By INDIJA = By.xpath("");
+    private final By PIELIETOT_BTN = By.xpath(".//button[@id = 'regionalSelectorCountry-applyButton']");
+    private final By AKTIVITATES_FIELD = By.xpath(".//button[@id = 'travelActivities-open']");
 
 
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
@@ -25,7 +28,7 @@ public class CelojumuPage extends BaseFunction{
     }
 
     public void lookingForCelojumaGalamerkisField() {
-        LOGGER.info("Looking for Celojuma Galamerkis Field to click on it");
+        LOGGER.info("Looking for Celojuma Galamerkis field to click on it");
 
         click(CELOJUMA_GALAMERKIS_FIELD);
     }
@@ -36,9 +39,27 @@ public class CelojumuPage extends BaseFunction{
         click(IZVELIES_VALSTI_BTN);
     }
 
-    public void clickEnterText () {
+    public void clickEnterText() {
         LOGGER.info("Typing Indija and clicking on the found");
 
         clickEnterText(PIEVIENOT_VALSTI_BTN, "Indija");
+    }
+
+    public void clickOnIndija() {
+        LOGGER.info("Looking for the found country and clicking on it");
+
+        click(INDIJA);
+    }
+
+    public void clickOnPielietotBtn() {
+        LOGGER.info("Looking for the Pielietot button to click on it");
+
+        click(PIELIETOT_BTN);
+    }
+
+    public void lookingForAktivitatesField() {
+        LOGGER.info("Looking for Aktivitates field to click on it");
+
+        click(AKTIVITATES_FIELD);
     }
 }

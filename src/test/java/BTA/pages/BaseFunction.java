@@ -43,7 +43,7 @@ public class BaseFunction {
     }
 
     public void clickEnterText(By locator, String text) {
-        LOGGER.info("Waiting then field would be visable and entering text");
+        LOGGER.info("Waiting then field would be visible and entering text");
 
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
     }

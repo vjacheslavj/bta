@@ -10,7 +10,7 @@ public class TestBta {
 
     @Test
     public void btaTest() {
-        LOGGER.info("");
+        LOGGER.info("This test is doing some actions with Travel insurance and do some checks");
 
         BaseFunction baseFunction = new BaseFunction();
         baseFunction.openPage("www.bta.lv");
@@ -25,6 +25,9 @@ public class TestBta {
         celojumuPage.lookingForIzvelValstiBtnPopupWindow();
         celojumuPage.clickEnterText();
         celojumuPage.clickEnterText();
+        celojumuPage.clickOnIndija();
+        celojumuPage.clickOnPielietotBtn();
+        celojumuPage.lookingForAktivitatesField();
 
     }
 }
