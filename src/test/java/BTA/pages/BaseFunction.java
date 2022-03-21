@@ -17,7 +17,7 @@ public class BaseFunction {
 
     public BaseFunction() {
         LOGGER.info("Setting driver location");
-        System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C://Users/vjermakovs/Desktop/New folder/chromedriver.exe");
         LOGGER.info("Opening browser window");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -39,12 +39,17 @@ public class BaseFunction {
     public void click(By locator){
         LOGGER.info("Clicking on element: " + locator);
 
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
     }
 
     public void clickEnterText(By locator, String text) {
         LOGGER.info("Waiting then field would be visible and entering text");
 
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
+    }
+
+
+    public void closeBrowser() {
+        driver.close();
     }
 }
