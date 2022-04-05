@@ -32,6 +32,8 @@ public class CelojumuPage {
 
         LOGGER.info("Scrolling down the page");
         scrollDown.executeScript("window.scrollBy(0, 400)");
+
+        baseFunction.sleep();
     }
 
     public void lookingForCelojumaGalamerkisField() {

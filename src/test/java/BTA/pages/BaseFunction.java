@@ -48,6 +48,16 @@ public class BaseFunction {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(text);
     }
 
+    public void sleep () {
+        try {
+            Thread.sleep(3000);
+        }
+        catch (Exception e) {
+
+        }
+
+    }
+
 
     public void closeBrowser() {
         driver.close();
